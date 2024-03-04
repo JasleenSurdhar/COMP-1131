@@ -1,0 +1,50 @@
+//TriangleAreaCalculator is a simple Java application that calculates the area of a triangle
+//using Heron's formula, based on the lengths of its sides (a, b, and c).
+
+//Author: Jasleen Surdhar
+// Date: March 4th, 2024
+
+//Importing Scanner from the Java Library to be used in the code
+import java.util.Scanner;
+
+public class AreaOfTriangle
+
+{
+    public static void main(String[]args)
+    {
+        //Declaring the Double Values used in the code, Where S denoted the Semi-perimeter
+        double AreaOfTriangle, a, b, c, S;
+        
+        //Using the Scanner method to take input from the users
+        Scanner scan = new Scanner(System.in);
+        
+        //Prompting the user for value of "a"
+        System.out.println("Enter the value for " + "a:");
+        a = scan.nextDouble();
+        
+        //Prompting the user for value of "b"
+        System.out.println(" Enter the value for " + "b:");
+        b = scan.nextDouble();
+        
+        //Prompting the user for value of "c"
+        System.out.println(" Enter the value for " + "c:");
+        c = scan.nextDouble();
+        
+        // calculating the Semi-Permiter using arithmetic operations
+        S = ( a + b + c)/ 2;
+        
+        //Calculating the Area using Math method which is inside the .lang Java library
+        AreaOfTriangle = Math.sqrt(S*(S-a)*(S-b)*(S-c));
+        
+        //Printing the result calculated in the end
+        System.out.print(" The are of the Triangle is: " + AreaOfTriangle + "\n");
+        
+        
+        
+        
+    }
+}
+
+
+    
+    
