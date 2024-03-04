@@ -1,0 +1,52 @@
+//VolumeAndSurfaceArea is a simple Java application that calculates
+ //the volume and surface area of a cylinder based on the given radius (r) and height (h).
+
+//Author: Jasleen Surdhar
+// Date: March 4th, 2024
+
+//Importing Scanner and Decimal format from the Java Library to be used in the code
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class VolumeAndSurfaceArea 
+{
+
+    public static void main(String[] args) 
+    {
+        // Declare variables for radius, height, area, and volume
+        double r, h, area, volume;
+
+        // Create a Scanner object to read input from the user
+        Scanner scan = new Scanner(System.in);
+
+        // Prompt the user for the radius of the cylinder
+        System.out.println("Please provide the Radius " + "\"r\"" + " of the cylinder: ");
+        r = scan.nextDouble();
+
+        // Prompt the user for the height of the cylinder
+        System.out.println("Please provide the Height " + "\"h\"" + " of the cylinder: ");
+        h = scan.nextDouble();
+
+        // Calculate the volume of the cylinder
+        volume = Math.PI * Math.pow(r, 2) * h;
+
+        // Use DecimalFormat to format the volume to four decimal places
+        DecimalFormat decimalVolume = new DecimalFormat("#.####");
+        String newVolume = decimalVolume.format(volume);
+
+        // Calculate the surface area of the cylinder
+        area = 2 * Math.PI * r * (h + r);
+
+        // Use DecimalFormat to format the area to four decimal places
+        DecimalFormat decimalArea = new DecimalFormat("#.####");
+        String newArea = decimalArea.format(area);
+
+        // Display the calculated volume and surface area
+        System.out.println(" The Volume of the Cylinder is: " + newVolume +
+                "\n The Surface Area of Cylinder is: " + newArea + "\n");
+
+    }
+}
+
+    
+    
